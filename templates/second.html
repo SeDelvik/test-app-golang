@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>abc</title>
+        <link rel="stylesheet" href="../css/foundation.css" />
+    </head>
+    <body>
+        <div class="grid-x grid-padding-x">
+            {{if not .Data }}
+                <div class="cell"><h1>всё занято на это время</h1> </div>
+            {{else}}
+                <div class="cell">Выберите ресторан и укажите данные</div>
+                <!-- <h1>Ф</h1> -->
+                <form method="post">
+                    <div class="cell shrink">
+                        <select name="reustarant">
+                            {{range .Data}}
+                                <option value={{ .Id }}> {{ .Name }}, мест: {{ .PersonsCountAvailibale }}</option>
+                            {{end}}
+                        </select>
+                    </div>
+                    <div class="cell shrink"><input type="text" placeholder="Имя" name="name"></div>
+                    <div class="cell shrink"><input type="tel" placeholder="Телефон" name="phone"></div>
+                    <div class="cell shrink"><input type="submit"></div>
+                </form>
+                
+            {{end}}
+        </div>
+    </body>
+</html>

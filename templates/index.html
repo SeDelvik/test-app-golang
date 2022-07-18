@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>abc</title>
+        <link rel="stylesheet" href="../css/foundation.css" />
+    </head>
+    <body>
+        <form method="post">
+            <div class="grid-x grid-padding-x">
+                <div class="cell shrink">
+                    <label for="peopleCount">Количество человек:</label>
+                </div>
+                <div class="cell shrink">
+                    <input type="number" name="peopleCount" step="1" min="1" value="1">
+                </div>
+                
+            </div>
+            
+            <div class="grid-x grid-padding-x">
+                <div class="cell shrink">
+                    <label for="hour">укажите время</label>
+                </div>
+                <div class="cell shrink">
+                    <input type="number" name="hour" step="1" min="9" max="21" value="9">
+                </div>
+                <div class="cell shrink">
+                    <input type="number" name="minute" step="1" min="0" max="59" value="0">
+                </div>
+            </div>
+            
+            <input type="submit">
+        </form>
+    </body>
+</html>

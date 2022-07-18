@@ -1,0 +1,1 @@
+user=postgres password=admin dbname=postgres sslmode=disable
